@@ -40,7 +40,7 @@ mvn install:install-file -Dfile=lcrypto-j2me-173/zips/cldc_bccore_classes.zip -D
 Build the `totp-me` and feed it with `lcrypto` version from the previous step:
 
 ```bash
-mvn clean package -Dlcrypto.version=1.60
+mvn clean package
 ```
 
 This default build uses Microemulator API implementation to simplify the build process, but it's only MIDP-2.0
@@ -57,7 +57,7 @@ Just use `exec:java` goal after you've successfully built the project
 (provide lcrypto version if needed).
 
 ```bash
-mvn exec:java -Dlcrypto.version=1.73
+mvn exec:java
 ```
 
 ## License
