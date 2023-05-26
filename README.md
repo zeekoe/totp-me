@@ -57,7 +57,7 @@ Just use `exec:java` goal after you've successfully built the project
 (provide lcrypto version if needed).
 
 ```bash
-mvn exec:java -Dlcrypto.version=1.60
+mvn exec:java -Dlcrypto.version=1.73
 ```
 
 ## License
