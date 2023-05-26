@@ -34,6 +34,7 @@ import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
 import javax.microedition.lcdui.Display;
 import javax.microedition.lcdui.Displayable;
+import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Form;
 import javax.microedition.lcdui.Gauge;
 import javax.microedition.lcdui.List;
@@ -159,6 +160,8 @@ public class TOTPMIDlet extends MIDlet implements CommandListener {
 	 * Constructor - initializes GUI components.
 	 */
 	public TOTPMIDlet() {
+
+		siToken.setFont(Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, Font.SIZE_LARGE));
 
 		// Main display
 		fMain.append(siToken);
@@ -1145,7 +1148,8 @@ public class TOTPMIDlet extends MIDlet implements CommandListener {
 					} catch (NumberFormatException e) {
 						debugErr(e.getMessage());
 					}
-					siToken.setText(genToken(newCounter, getHMac(), digits));
+					final String generatedToken = genToken(newCounter, getHMac(), digits);
+					siToken.setText(generatedToken.substring(0,3) + " " + generatedToken.substring(3));
 					cachedCounter = newCounter;
 				}
 				if (timeStep == 1 || "".equals(siToken.getText())) {
