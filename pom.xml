@@ -45,7 +45,7 @@
 		<dependency>
 			<groupId>org.bouncycastle</groupId>
 			<artifactId>lcrypto-j2me</artifactId>
-			<version>${lcrypto.version}</version>
+			<version>1.73</version>
 		</dependency>
 
 		<dependency>

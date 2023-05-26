@@ -27,14 +27,14 @@ or you can download [current sources as a zip file](https://github.com/kwart/tot
 
 Install [Maven](https://maven.apache.org).
 
-Download `lcrypto-j2me-xxx` archive ("xxx" - current version of lcrypto, for example "lcrypto-j2me-160.tar.gz") 
+Download `lcrypto-j2me-xxx` archive ("xxx" - current version of lcrypto, for example "lcrypto-j2me-173.tar.gz") 
 from the [Bouncy Castle website](https://www.bouncycastle.org/latest_releases.html), 
 extract it and install the classes as a JAR file to your local repository:
 
 ```bash
-wget https://www.bouncycastle.org/download/lcrypto-j2me-160.tar.gz
-tar xf ./lcrypto-j2me-160.tar.gz
-mvn install:install-file -Dfile=lcrypto-j2me-160/zips/cldc_bccore_classes.zip -DgroupId=org.bouncycastle -DartifactId=lcrypto-j2me -Dversion=1.60 -Dpackaging=jar
+wget https://www.bouncycastle.org/download/lcrypto-j2me-173.tar.gz
+tar xf ./lcrypto-j2me-173.tar.gz
+mvn install:install-file -Dfile=lcrypto-j2me-173/zips/cldc_bccore_classes.zip -DgroupId=org.bouncycastle -DartifactId=lcrypto-j2me -Dversion=1.73 -Dpackaging=jar
 ```
 
 Build the `totp-me` and feed it with `lcrypto` version from the previous step:
